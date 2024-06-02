@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Make Payment";
+}
+
+<div class="container">
+
+    <h1 class="display-6 text-center mb-5">Make Payment</h1>
+
+    <div class="alert alert-warning">
+        <span>
+            If you haven't provided your banking details to make online payments,
+            <a class="text-center" asp-controller="Payment" asp-action="ProvideBankingDetails">click here</a>
+            , however if you don't want to make online payments, you can continue paying cash to the owner directly.
+        </span>
+    </div>    
+</div>

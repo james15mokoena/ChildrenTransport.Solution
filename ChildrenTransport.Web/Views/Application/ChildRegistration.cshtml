@@ -1,0 +1,44 @@
+﻿@model ChildrenTransport.Web.Models.Child;
+
+@{
+    ViewData["Title"] = "Child Application";
+}
+
+<div class="container text-center">
+
+    <h1 class="display-6 text-center mb-5">Child Application Form</h1>
+
+    <form method="post" class="form text-center mb-3" asp-controller="Application" asp-action="ProcessChildApplication">
+
+        <label class="form-label"> ID </label>
+        <input class="form-control" asp-for="ChildId" type="text" required/>
+        <label class="form-label mt-3"> First Name </label>
+        <input class="form-control" asp-for="FirstName" type="text" required/>
+        <label class="form-label mt-2" required> Last Name </label>
+        <input class="form-control" asp-for="LastName" type="text" required/>
+        <label class="form-label mt-2" asp-for="Gender"> Gender </label>
+        <input class="form-control" asp-for="Gender" type="text" required/>        
+        <label class="form-label mt-2" asp-for="ParentId"> Parent ID </label>
+        <input class="form-control" asp-for="ParentId" type="text" required/>        
+        <button class="btn btn-success mt-3" type="submit"> Apply </button>
+
+    </form>
+
+    <a class="mt-4" asp-controller="Application" asp-action="AddressRegistration">Register Address</a>
+
+    @{
+
+        if(TempData["Success"] != null){
+
+            <div class="alert alert-success mt-3 text-center">
+                @TempData["Success"]
+            </div>
+        }
+        else if(TempData["Error"] != null){
+            <div class="alert alert-danger mt-3 text-center">
+                @TempData["Error"]
+            </div>
+        }
+    }
+  
+</div>

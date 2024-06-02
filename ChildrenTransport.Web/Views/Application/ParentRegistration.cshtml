@@ -1,0 +1,43 @@
+﻿@model ChildrenTransport.Web.Models.Parent;
+
+@{
+    ViewData["Title"] = "Parent Registration";
+}
+
+<div class="container text-center">
+
+    <h1 class="display-6 text-center mb-5">Parent Registration</h1>
+
+    <form method="post" class="form text-center" asp-controller="Authentication" asp-action="ProcessParentCreation">
+
+        <label class="form-label"> ID </label>
+        <input class="form-control" asp-for="ParentId" type="text" required/>
+        <label class="form-label mt-3"> First Name </label>
+        <input class="form-control" asp-for="FirstName" type="text" required/>
+        <label class="form-label mt-2" required> Last Name </label>
+        <input class="form-control" asp-for="LastName" type="text" required/>
+        <label class="form-label mt-2" asp-for="Phone"> Phone </label>
+        <input class="form-control" asp-for="Phone" type="text" required/>
+        <label class="form-label mt-2"> Password </label>
+        <input class="form-control" asp-for="Password" type="password" required/>        
+        <button class="btn btn-success mt-3" type="submit"> Register </button>
+
+    </form>
+
+    @{
+
+        if(TempData["Success"] != null){
+
+            <div class="alert alert-success mt-3 text-center">
+                @TempData["Success"]
+            </div>
+        }
+        else if(TempData["Error"] != null){
+            <div class="alert alert-danger">
+                @TempData["Error"]
+            </div>
+        }
+    }
+     
+</div>
+

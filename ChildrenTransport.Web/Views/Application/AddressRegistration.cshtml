@@ -1,0 +1,49 @@
+﻿@model ChildrenTransport.Web.Models.Address;
+
+@{
+    ViewData["Title"] = "Register Address";
+}
+
+<div class="container text-center">
+
+    <h1 class="display-5">Address Registration </h1>
+
+    <form method="post" class="form mb-4" asp-controller="Application" asp-action="AddressRegistration">
+
+        <label class="form-label">House number</label>
+        <input class="form-control" asp-for="HouseNo" type="number" required/>        
+        <label class="form-label mt-3">Extension</label>
+        <input class="form-control" asp-for="Extension" type="text" required/>
+        <label class="form-label mt-3">Section</label>
+        <input class="form-control" asp-for="Section" type="text" required />
+        <label class="form-label mt-3">Location</label>
+        <input class="form-control" asp-for="Location" type="text" required />
+        <label class="form-label mt-3">Town</label>
+        <input class="form-control" asp-for="Town" type="text" required />
+        <label class="form-label mt-3">Code</label>
+        <input class="form-control" asp-for="Code" type="number" required />
+        <label class="form-label mt-3">Child Id</label>
+        <input class="form-control" asp-for="ChildId" type="text" required />
+        <label class="form-label mt-3">Parent Id</label>
+        <input class="form-control" asp-for="ParentId" type="text" required />
+        <button class="btn btn-success mt-3" type="submit">Register Address </button>            
+    </form>
+
+    @{
+
+        if(TempData["Success"] != null)
+        {
+            <div class="alert alert-success mt-3 text-center">
+                @TempData["Success"]
+            </div>
+        }
+        else if(TempData["Error"] != null)
+        {
+            <div class="alert alert-danger mt-3 text-center">
+                @TempData["Error"]
+            </div>
+        }
+
+    }
+
+</div>

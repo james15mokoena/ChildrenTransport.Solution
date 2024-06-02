@@ -1,0 +1,58 @@
+﻿@model ChildrenTransport.Web.Models.Taxi;
+
+@{
+    ViewData["Title"] = "Update Transport";
+}
+
+<div class="container">
+
+    <h1 class="display-6 text-center mb-4">Update Taxi Data</h1>
+
+    <form method="post" class="form text-center" asp-controller="Administration" asp-action="UpdateTransport">
+
+        <label class="form-label">Transport Id:</label>
+        <br />
+        <input type="number" min="0" placeholder="Transport ID is required" asp-for="Id" class="form-control" required />
+        <br />
+
+        <label class="form-label">Transport Name:</label>
+        <br />
+        <input asp-for="Name" class="form-control"/>
+        <br />
+
+        <label class="form-label">Number of seats:</label>
+        <br />
+        <input asp-for="NumSeats" type="number" min="0" class="form-control"/>
+        <br />
+
+        <label class="form-label">Image URL:</label>
+        <br />
+        <input asp-for="Image" class="form-control"/>
+        <br />
+
+        <label class="form-label">Number of such transports:</label>
+        <br />
+        <input asp-for="Quantity" type="number" min="0" class="form-control" />
+        <br />
+        
+        <button asp-route-option="getdata" type="submit" style="width:150px;" class="btn btn-success text-center">Get Data</button>
+        <button asp-route-option="update" type="submit" style="width:150px;margin-right:5px;" class="btn btn-primary">Update</button>
+        <button asp-route-option="delete" type="submit" style="width:150px" class="btn btn-danger">Delete</button>
+    </form>
+
+    @{
+        if (TempData["Response"] != null)
+        {
+            <div class="alert alert-success text-center mt-3">
+                @TempData["Response"]
+            </div>
+        }       
+        else if(TempData["Error"] != null)
+        {
+            <div class="alert alert-danger text-center mt-3">
+                @TempData["Error"]
+            </div>
+        }
+    }
+
+</div>

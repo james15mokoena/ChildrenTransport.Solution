@@ -1,0 +1,62 @@
+﻿@model List<ChildrenTransport.Web.Models.Taxi>
+
+@{
+    ViewData["Title"] = "Transports";
+}
+
+<div class="container">
+
+    <h1 class="display-6 text-center">Transports</h1>
+
+    <div class="container text-center">
+        
+        @{
+            if(TempData["Response"] != null)
+            {
+                <div class="alert alert-warning">
+                    @TempData["Response"]
+                </div>
+            }
+            else
+            {
+                <table class="table">
+
+                    <thead>
+                        <tr>
+                            <th>Transport Id</th>
+                            <th>Transport</th>
+                            <th>Name</th>
+                            <th>Number of seats</th>
+                            <th>Quantity</th>
+                            <th>Image URL</th>                            
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        @{
+                            foreach (Taxi taxi in Model)
+                            {
+                                if (taxi != null)
+                                {
+                                    <tr>
+                                        <td>@taxi.Id</td>
+                                        <td><img src="~/@taxi.Image" width="60" height="40"/></td>
+                                        <td>@taxi.Name</td>
+                                        <td>@taxi.NumSeats</td>
+                                        <td>@taxi.Quantity</td>
+                                        <td>@taxi.Image</td>
+                                    </tr>
+                                }
+                            }
+                        }
+
+                    </tbody>
+
+                </table>
+            }
+        }        
+
+    </div>
+
+</div>

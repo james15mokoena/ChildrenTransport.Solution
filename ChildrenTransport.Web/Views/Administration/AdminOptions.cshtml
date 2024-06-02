@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewData["Title"] = "Admin Options";
+}
+
+<style type="text/css">
+
+    .cls{
+        background-color: lightgray;
+        margin-right: 5px;
+        margin-top:7px;
+        height: 80px;
+        text-align:center;
+        padding-top: 25px;
+        font-size:19px;
+        font-family:Arial;
+    }
+</style>
+
+<div class="container">
+
+    <h1 class="display-6 text-center mb-5">Administrator Options</h1>
+
+    <div class="container text-center">
+
+        <div class="row">
+
+            <div class="cls col-12 col-md-2">
+
+                <a class="text-black" asp-controller="Administration" asp-action="RegisterTransport">Register Transport</a>
+
+            </div>
+
+            <div class="cls col-12 col-md-2">
+
+                <a class="text-black" asp-controller="Administration" asp-action="UpdateTransport">Update Transport Data</a>
+
+            </div>
+
+            <div class="cls col-12 col-md-2">
+
+                <a class="text-black" asp-controller="Administration" asp-action="DisplayTransports">Display Transports</a>
+
+            </div>
+
+            <div class="cls col-12 col-md-2">
+
+                <a class="text-black" asp-controller="Administration" asp-action="UpdateParent">Update Parent Data</a>
+
+            </div>
+
+            <div class="cls col-12 col-md-2">
+
+                <a class="text-black" asp-controller="Administration" asp-action="UpdateChild">Update Child Data</a>
+
+            </div>
+            <div class="cls col-12 col-md-2">
+
+                <a class="text-black" asp-controller="Administration" asp-action="Parents">Display Parents</a>
+
+            </div>
+            <div class="cls col-12 col-md-2">
+
+                <a class="text-black" asp-controller="Administration" asp-action="Children">Display Children</a>
+
+            </div>
+            <div class="cls col-12 col-md-2">
+
+                <a class="text-black" asp-controller="Administration" asp-action="Report">Business Report</a>
+
+            </div>           
+            <div class="cls col-12 col-md-2">
+
+                <a class="text-black" asp-controller="Administration" asp-action="Invoices">See Invoices</a>
+
+            </div>
+            <div class="cls col-12 col-md-2">
+
+                <a class="text-black" asp-controller="Authentication" asp-action="AdminCreation">Add New Admin</a>
+
+            </div>
+            <div class="cls col-12 col-md-2">
+
+                <a class="text-black" asp-controller="Administration" asp-action="AdminUpdate">Update Admin</a>
+
+            </div>
+
+            <div class="cls col-12 col-md-2">
+
+                <a class="text-black" asp-controller="Administration" asp-action="DisplayAdmins">Display Admins</a>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,56 @@
+﻿@model List<ChildrenTransport.Web.Models.Administrator>
+
+@{
+    ViewData["Title"] = "Administrators";        
+}
+
+<div class="container">
+
+    <h1 class="display-5 text-center mb-5"> Administrators </h1>
+
+    <div class="container text-center">
+
+        <table class="table">
+
+            <thead>
+
+                <tr>
+                    <th>
+                        First Name
+                    </th>
+                    <th>
+                        Last Name
+                    </th>
+                    <th>
+                        Phone
+                    </th>
+                </tr>
+
+                <tbody>
+
+                    @{
+
+                        foreach(Administrator admin in Model){
+
+                            if(admin != null){
+
+                                <tr>
+                                    <td> @admin.FirstName</td>
+                                    <td> @admin.LastName</td>
+                                    <td> @admin.Phone</td>
+                                </tr>
+                            }
+                        }
+                    }
+                </tbody>
+
+            </thead>
+
+
+        </table>
+
+
+    </div>
+
+
+</div>

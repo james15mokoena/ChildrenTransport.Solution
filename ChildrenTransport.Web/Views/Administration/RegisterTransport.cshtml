@@ -1,0 +1,51 @@
+﻿@model ChildrenTransport.Web.Models.Taxi;
+
+@{
+    ViewData["Title"] = "Register Transport";
+}
+
+<div class="container">
+
+    <h1 class="display-6 text-center mb-5">Register a New Taxi</h1>
+
+    <form method="post" class="form text-center" asp-controller="Administration" asp-action="RegisterTransport">
+
+        <label class="form-label">Transport Name:</label>
+        <br />
+        <input asp-for="Name" class="form-control" required/>
+        <br />
+
+        <label class="form-label">Number of seats:</label>
+        <br/>
+        <input asp-for="NumSeats" type="number" min="1" class="form-control" required/>
+        <br />
+
+        <label class="form-label">Image URL:</label>
+        <br/>
+        <input asp-for="Image" class="form-control" required/>
+        <br />
+
+        <label class="form-label">Number of such transports:</label>
+        <br />
+        <input asp-for="Quantity" type="number" min="1" class="form-control" required />
+        <br />
+
+        <button style="width:150px" class="btn btn-success" type="submit">Register</button>
+    </form>
+    
+        @{
+            if(TempData["Response"] != null)
+            {
+               <br />
+                <div class="alert alert-success text-center mt-3">
+                    @TempData["Response"]
+                </div>
+            }
+            else if(TempData["Error"] != null)
+            {
+                <div class="alert alert-danger text-center mt-3">
+                    @TempData["Error"]
+                </div>
+            }
+        }
+</div>
