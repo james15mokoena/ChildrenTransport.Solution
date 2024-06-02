@@ -162,32 +162,182 @@ namespace ChildrenTransport.Web.Controllers
 
         public IActionResult Invoices()
         {
-            return View();
+            if (CheckLoggedIn())
+            {
+                ViewData["Logged_In"] = "Admin";
+                return View();
+            }
+            
+            return RedirectToAction("AdminLogin", "Authentication");
         }
 
         public IActionResult Report()
         {
-            return View();
+            if (CheckLoggedIn())
+            {
+                ViewData["Logged_In"] = "Admin";
+                return View();
+            }
+
+            return RedirectToAction("AdminLogin", "Authentication");
         }
 
-        public IActionResult Children()
+        public async Task<IActionResult> DisplayChildren()
         {
-            return View();
+            if (CheckLoggedIn())
+            {
+                ViewData["Logged_In"] = "Admin";
+
+                var children = database.Children.DefaultIfEmpty();
+                var addresses = database.Addresses.DefaultIfEmpty();
+                List<Child?> childs = await children.ToListAsync();
+                List<Address?> addrs = await addresses.ToListAsync();
+                List<ChildAddress> childAndAddress = new();
+
+                if (childs != null && addrs != null)
+                {
+                    
+                    for(int i=0; i< childs.Count; ++i)
+                    {
+                        Child? child = childs.ElementAt(i);
+
+                        for (int j=0; j< addrs.Count; ++j)
+                        {
+                            
+                            Address? address = addrs.ElementAt(j);
+                            if(child != null && address != null && child.ChildId == address.ChildId)
+                            {
+                                ChildAddress ca = new(child, address);
+                                childAndAddress.Add(ca);
+                            }
+                        }                        
+                    }
+
+                    return View(childAndAddress);
+                }
+
+                return View();
+            }
+
+            return RedirectToAction("AdminLogin", "Authentication");
+            
         }
 
-        public IActionResult Parents()
+        public async Task<IActionResult> DisplayParents()
         {
-            return View();
+            if (CheckLoggedIn())
+            {
+                var parents = database.Parents.DefaultIfEmpty();
+                ViewData["Logged_In"] = "Admin";
+                
+                if (parents != null){
+
+                    return View(await parents.ToListAsync());
+                }
+                
+                return View();
+            }
+
+            return RedirectToAction("AdminLogin", "Authentication");
         }
 
         public IActionResult UpdateParent()
         {
+
+
             return View();
         }
 
-        public IActionResult UpdateChild()
+        //public IActionResult UpdateChild()
+        //{
+        //    if (CheckLoggedIn())
+        //    {
+        //        ViewData["Logged_In"] = "Admin";
+        //        return View();
+        //    }
+
+        //    return RedirectToAction("AdminLogin", "Authentication");
+        //}
+
+        // THERE'S A PROBLEM HERE!!!!
+        public async Task<IActionResult> UpdateChild(Child? child, string? option)
         {
-            return View();
+            if (CheckLoggedIn())
+            {
+                ViewData["Logged_In"] = "Admin";
+                Child? ch =  null;
+                bool updated = false;
+
+                if (child != null)
+                    ch = await database.Children.FirstOrDefaultAsync(c => c.ChildId == child.ChildId);                
+
+                if (ch != null && child != null)
+                {
+                    if (option == "update")
+                    {
+                        if (child.FirstName != null && ch.FirstName != child.FirstName)
+                        {
+                            ch.FirstName = child.FirstName;
+                            updated = true;
+                        }
+
+                        if (child.LastName != null && ch.LastName != child.LastName)
+                        {
+                            ch.LastName = child.LastName;
+                            updated = true;
+                        }
+
+                        if (ch.Gender != child.Gender)
+                        {
+                            ch.Gender = child.Gender;
+                            updated = true;
+                        }
+
+                        if (child.ParentId != null && ch.ParentId != child.ParentId)
+                        {
+                            ch.ParentId = child.ParentId;
+                            updated = true;
+                        }
+
+                        if (updated)
+                        {
+                            try
+                            {
+                                database.Children.Update(ch);
+                                await database.SaveChangesAsync();
+                                TempData["Success"] = "Successfully updated the data.";
+                            }
+                            catch (Exception ex)
+                            {
+                                TempData["Error"] = ex.InnerException;
+                            }
+
+
+                        }
+
+                    }
+                    else if (option == "delete")
+                    {
+                        try
+                        {
+                            database.Children.Remove(ch);
+                            await database.SaveChangesAsync();
+                            TempData["Success"] = "Successfully deleted the child.";
+                        }
+                        catch (Exception ex)
+                        {
+                            TempData["Error"] = ex.InnerException;
+                        }
+                    }
+                }
+                else
+                {
+                    TempData["Error"] = "Child does not exist";
+                    return View();
+                }
+            }
+
+            return RedirectToAction("AdminLogin", "Administration");
         }
 
         public IActionResult DisplayTransports()
@@ -304,5 +454,9 @@ namespace ChildrenTransport.Web.Controllers
                 return RedirectToAction("AdminLogin", "Authentication");            
         }
        
+        private bool CheckLoggedIn()
+        {
+            return HttpContext.Session.GetString("adminEmail") != null && HttpContext.Session.GetString("adminEmail") != "";            
+        }
     }
 }

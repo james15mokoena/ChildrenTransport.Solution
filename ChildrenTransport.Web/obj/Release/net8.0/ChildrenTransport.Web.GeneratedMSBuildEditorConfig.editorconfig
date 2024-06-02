@@ -18,10 +18,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Workspace\Microsoft Workspace\Web Development\Projects\ChildrenTransport.Solution\ChildrenTransport.Web
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Workspace/Microsoft Workspace/Web Development/Projects/ChildrenTransport.Solution/ChildrenTransport.Web/Views/About/AboutUs.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcQWJvdXRVcy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Workspace/Microsoft Workspace/Web Development/Projects/ChildrenTransport.Solution/ChildrenTransport.Web/Views/Administration/AdminOptions.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRpb25cQWRtaW5PcHRpb25zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -30,12 +26,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRpb25cQWRtaW5VcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Workspace/Microsoft Workspace/Web Development/Projects/ChildrenTransport.Solution/ChildrenTransport.Web/Views/Administration/Children.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRpb25cQ2hpbGRyZW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Workspace/Microsoft Workspace/Web Development/Projects/ChildrenTransport.Solution/ChildrenTransport.Web/Views/Administration/DisplayAdmins.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRpb25cRGlzcGxheUFkbWlucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Workspace/Microsoft Workspace/Web Development/Projects/ChildrenTransport.Solution/ChildrenTransport.Web/Views/Administration/DisplayChildren.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRpb25cRGlzcGxheUNoaWxkcmVuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Workspace/Microsoft Workspace/Web Development/Projects/ChildrenTransport.Solution/ChildrenTransport.Web/Views/Administration/DisplayParents.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRpb25cRGlzcGxheVBhcmVudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Workspace/Microsoft Workspace/Web Development/Projects/ChildrenTransport.Solution/ChildrenTransport.Web/Views/Administration/DisplayTransports.cshtml]
@@ -44,10 +44,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Workspace/Microsoft Workspace/Web Development/Projects/ChildrenTransport.Solution/ChildrenTransport.Web/Views/Administration/Invoices.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRpb25cSW52b2ljZXMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Workspace/Microsoft Workspace/Web Development/Projects/ChildrenTransport.Solution/ChildrenTransport.Web/Views/Administration/Parents.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5pc3RyYXRpb25cUGFyZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Workspace/Microsoft Workspace/Web Development/Projects/ChildrenTransport.Solution/ChildrenTransport.Web/Views/Administration/RegisterTransport.cshtml]
@@ -92,6 +88,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Workspace/Microsoft Workspace/Web Development/Projects/ChildrenTransport.Solution/ChildrenTransport.Web/Views/Authentication/ParentLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cUGFyZW50TG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Workspace/Microsoft Workspace/Web Development/Projects/ChildrenTransport.Solution/ChildrenTransport.Web/Views/Home/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Workspace/Microsoft Workspace/Web Development/Projects/ChildrenTransport.Solution/ChildrenTransport.Web/Views/Home/AddReview.cshtml]

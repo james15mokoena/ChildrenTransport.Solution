@@ -35,17 +35,17 @@
                             <a class="nav-link text-dark" asp-controller="Application" asp-action="ChildRegistration">Child Application</a>
                         </li>                                                
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="About" asp-action="AboutUs">About Us</a>
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="AboutUs">About Us</a>
                         </li>
                     </ul>
 
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             @{
-                                if(ViewData["Logged_In"] != null && ViewData["Logged_In"] == "Admin"){
+                                if(ViewData["Logged_In"] != null && ViewData["Logged_In"].ToString() == "Admin"){
                                     <a class="nav-link text-dark" asp-controller="Administration" asp-action="AdminOptions">Admin Options</a>
                                 }
-                                else if(ViewData["Logged_In"] != null && ViewData["Logged_In"] == "Parent"){
+                                else if(ViewData["Logged_In"] != null && ViewData["Logged_In"].ToString() == "Parent"){
                                     <a class="nav-link text-dark" asp-controller="Authentication" asp-action="ParentLogout"> Logout</a>
                                 }
                                 else{
@@ -74,11 +74,11 @@
         <div class="container text-center">
 
             @{
-                if(ViewData["Logged_In"] != null && ViewData["Logged_In"] == "Admin"){
+                if(ViewData["Logged_In"] != null && ViewData["Logged_In"].ToString() == "Admin"){
                     
                     <a style="font-size:18px;color:blue;" asp-controller="Authentication" asp-action="AdminLogout">Admin Logout</a>
                 }
-                else if(ViewData["Logged_In"] != null && ViewData["Logged_In"] == "Parent"){
+                else if(ViewData["Logged_In"] != null && ViewData["Logged_In"].ToString() == "Parent"){
                     <a style="font-size:18px;color:blue;" asp-controller="" asp-action=""></a>
                 }
                 else {

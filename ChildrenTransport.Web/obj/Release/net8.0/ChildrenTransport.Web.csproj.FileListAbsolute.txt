@@ -73,3 +73,4 @@ C:\Workspace\Microsoft Workspace\Web Development\Projects\ChildrenTransport.Solu
 C:\Workspace\Microsoft Workspace\Web Development\Projects\ChildrenTransport.Solution\ChildrenTransport.Web\obj\Release\net8.0\ChildrenTransport.Web.pdb
 C:\Workspace\Microsoft Workspace\Web Development\Projects\ChildrenTransport.Solution\ChildrenTransport.Web\obj\Release\net8.0\ChildrenTransport.Web.genruntimeconfig.cache
 C:\Workspace\Microsoft Workspace\Web Development\Projects\ChildrenTransport.Solution\ChildrenTransport.Web\obj\Release\net8.0\ref\ChildrenTransport.Web.dll
+C:\Workspace\Microsoft Workspace\Web Development\Projects\ChildrenTransport.Solution\ChildrenTransport.Web\obj\Release\net8.0\ChildrenTransport.Web.sourcelink.json

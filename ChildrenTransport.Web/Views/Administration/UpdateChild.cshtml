@@ -1,8 +1,45 @@
-﻿@{
+﻿@model ChildrenTransport.Web.Models.Child;
+
+@{
     ViewData["Title"] = "Update Child";
 }
 
-<div class="container">
+<div class="container text-center">
 
-    <h1 class="display-6 text-center">Update Child Data</h1>
+    <h1 class="display-6 text-center mb-5">Update Child Information </h1>
+
+    <form method="post" class="form text-center mb-3" asp-controller="Administration" asp-action="UpdateChild">
+
+        <label class="form-label"> ID </label>
+        <input class="form-control" asp-for="ChildId" type="text" required />
+        <label class="form-label mt-3"> First Name </label>
+        <input class="form-control" asp-for="FirstName" type="text" />
+        <label class="form-label mt-2" required> Last Name </label>
+        <input class="form-control" asp-for="LastName" type="text"/>
+        <label class="form-label mt-2" asp-for="Gender"> Gender </label>
+        <input class="form-control" asp-for="Gender" type="text"/>
+        <label class="form-label mt-2" asp-for="ParentId"> Parent ID </label>
+        <input class="form-control" asp-for="ParentId" type="text" />
+        <button class="btn btn-warning mt-3" asp-route="update" type="submit"> Update </button>
+        <button class="btn btn-danger mt-3" asp-route="delete" type="submit"> Delete </button>
+
+    </form>
+   
+    @{
+
+        if (TempData["Success"] != null)
+        {
+
+            <div class="alert alert-success mt-3 text-center">
+                @TempData["Success"]
+            </div>
+        }
+        else if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger mt-3 text-center">
+                @TempData["Error"]
+            </div>
+        }
+    }
+
 </div>

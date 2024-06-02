@@ -22,7 +22,7 @@ namespace ChildrenTransport.Web.Controllers
 
         public IActionResult AdminLogout()
         {
-            if(HttpContext.Session.GetString("adminEmail") != null && HttpContext.Session.GetString("adminEmail") != "")
+            if(CheckLoggedIn("adminEmail"))
             {
                 HttpContext.Session.Remove("adminEmail");
                 ViewData["Logged_In"] = null;                
@@ -34,7 +34,7 @@ namespace ChildrenTransport.Web.Controllers
 
         public IActionResult ParentLogout()
         {
-            if (HttpContext.Session.GetString("ParentID") != null && HttpContext.Session.GetString("ParentID") != "")
+            if (CheckLoggedIn("ParentID"))
             {
                 HttpContext.Session.Remove("ParentID");
                 ViewData["Logged_In"] = null;
@@ -87,7 +87,7 @@ namespace ChildrenTransport.Web.Controllers
 
         public IActionResult AdminCreation()
         {
-            if (HttpContext.Session.GetString("adminEmail") != null && HttpContext.Session.GetString("adminEmail") != "")
+            if (CheckLoggedIn("adminEmail"))
             {
                 ViewData["Logged_In"] = "Admin";
 
@@ -104,7 +104,7 @@ namespace ChildrenTransport.Web.Controllers
         /// <returns></returns>
         public IActionResult ProcessAdminCreation(Administrator admin)
         {
-            if (HttpContext.Session.GetString("adminEmail") != null && HttpContext.Session.GetString("adminEmail") != "")
+            if (CheckLoggedIn("adminEmail"))
             {
                 ViewData["Logged_In"] = "Admin";
 
@@ -160,5 +160,9 @@ namespace ChildrenTransport.Web.Controllers
             return View();
         }
 
+        private bool CheckLoggedIn(string who)
+        {
+            return HttpContext.Session.GetString(who) != null && HttpContext.Session.GetString(who) != "";
+        }
     }
 }

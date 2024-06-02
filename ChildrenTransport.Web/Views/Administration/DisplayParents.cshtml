@@ -1,0 +1,58 @@
+﻿@model List<ChildrenTransport.Web.Models.Parent>;
+
+@{
+    ViewData["Title"] = "Registered Parents";
+}
+
+<div class="=container text-center">
+
+    <h1 class="display-5 text-center mb-3">Registered Parents</h1>
+   
+    <div class="container text-center"> 
+
+        @{
+            if(Model != null)
+            {
+
+                <table class="table">
+                
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        
+                        @{
+                            foreach(Parent parent in Model)
+                            {
+
+                                if(parent != null)
+                                {
+                                    <tr>
+                                        <td>@parent.ParentId</td>
+                                        <td>@parent.FirstName</td>
+                                        <td>@parent.LastName</td>
+                                        <td>@parent.Phone</td>
+                                    </tr>
+                                }
+
+                            }
+                        }
+
+                    </tbody>
+
+                </table>
+            }
+
+        }
+    </div>
+    
+
+
+</div>
+

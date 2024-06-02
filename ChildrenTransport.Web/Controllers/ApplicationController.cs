@@ -16,7 +16,7 @@ namespace ChildrenTransport.Web.Controllers
 
         public IActionResult ChildRegistration()
         {            
-            if(HttpContext.Session.GetString("ParentID") != null && HttpContext.Session.GetString("ParentID") != "")
+            if(CheckLoggedIn("ParentID"))
             {
                 ViewData["Logged_In"] = "Parent";
             }
@@ -29,7 +29,7 @@ namespace ChildrenTransport.Web.Controllers
             var parent = await database.Parents.FirstOrDefaultAsync(p => p.ParentId == child.ParentId);
             var chld = await database.Children.FirstOrDefaultAsync(c => c.ChildId == child.ChildId);
 
-            if (HttpContext.Session.GetString("ParentID") != null && HttpContext.Session.GetString("ParentID") != "")
+            if (CheckLoggedIn("ParentID"))
             {
                 ViewData["Logged_In"] = "Parent";
 
@@ -64,7 +64,7 @@ namespace ChildrenTransport.Web.Controllers
 
         public async Task<IActionResult> AddressRegistration(Address? address)
         {
-            if (HttpContext.Session.GetString("ParentID") != null && HttpContext.Session.GetString("ParentID") != "")
+            if (CheckLoggedIn("ParentID"))
             {
                 ViewData["Logged_In"] = "Parent";
 
@@ -100,5 +100,9 @@ namespace ChildrenTransport.Web.Controllers
             return View();
         }
 
+        private bool CheckLoggedIn(string who)
+        {
+            return HttpContext.Session.GetString(who) != null && HttpContext.Session.GetString(who) != "";
+        }
     }
 }

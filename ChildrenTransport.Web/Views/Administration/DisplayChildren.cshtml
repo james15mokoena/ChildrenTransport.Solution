@@ -1,0 +1,64 @@
+﻿@model List<ChildrenTransport.Web.Models.ChildAddress>
+
+@{
+    ViewData["Title"] = "Registered Children";
+}
+
+<div class="container text-center">
+
+    <h1 class="display-5 mb-3">Registered Children</h1>
+
+    @{
+
+        if(Model != null)
+        {
+            <table class="table">
+                
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                        <th>Parent ID</th>
+                        <th>House No</th>
+                        <th>Ext</th>
+                        <th>Location</th>
+                        <th>Town</th>
+                    </tr>                
+                </thead>
+
+                <tbody>
+                    
+                    @{
+                        foreach (ChildAddress child in Model)
+                        {
+
+                            if(child != null)
+                            {
+                                <tr>
+                                    <td>@child.GetChild().ChildId</td>
+                                    <td>@child.GetChild().FirstName</td>
+                                    <td>@child.GetChild().LastName</td>
+                                    <td>@child.GetChild().Gender</td>
+                                    <td>@child.GetChild().ParentId</td>
+                                    <td>@child.GetAddress().HouseNo</td>
+                                    <td>@child.GetAddress().Extension</td>
+                                    <td>@child.GetAddress().Location</td>
+                                    <td>@child.GetAddress().Town</td>
+                                </tr>
+                            }
+                        }
+
+                    }
+
+                </tbody>
+
+            </table>
+        }
+
+    }
+    
+
+
+</div>

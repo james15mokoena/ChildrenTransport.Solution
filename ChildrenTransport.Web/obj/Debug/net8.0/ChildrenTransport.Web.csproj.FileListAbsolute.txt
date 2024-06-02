@@ -73,3 +73,4 @@ C:\Workspace\Microsoft Workspace\Web Development\Projects\ChildrenTransport.Solu
 C:\Workspace\Microsoft Workspace\Web Development\Projects\ChildrenTransport.Solution\ChildrenTransport.Web\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Workspace\Microsoft Workspace\Web Development\Projects\ChildrenTransport.Solution\ChildrenTransport.Web\obj\Debug\net8.0\ChildrenTransport.Web.csproj.AssemblyReference.cache
 C:\Workspace\Microsoft Workspace\Web Development\Projects\ChildrenTransport.Solution\ChildrenTransport.Web\obj\Debug\net8.0\Children.C26F32DF.Up2Date
+C:\Workspace\Microsoft Workspace\Web Development\Projects\ChildrenTransport.Solution\ChildrenTransport.Web\obj\Debug\net8.0\ChildrenTransport.Web.sourcelink.json
