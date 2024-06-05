@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
+      "Id": "C:\\Workspace\\Microsoft Workspace\\Web Development\\Projects\\ChildrenTransport.Solution\\ChildrenTransport.Web\\wwwroot\\images\\logo1.png",
+      "PackagePath": "staticwebassets\\images\\logo1.png"
+    },
+    {
       "Id": "C:\\Workspace\\Microsoft Workspace\\Web Development\\Projects\\ChildrenTransport.Solution\\ChildrenTransport.Web\\wwwroot\\images\\quantum1.png",
       "PackagePath": "staticwebassets\\images\\quantum1.png"
     },
@@ -271,6 +275,10 @@
     {
       "Id": "C:\\Workspace\\Microsoft Workspace\\Web Development\\Projects\\ChildrenTransport.Solution\\ChildrenTransport.Web\\wwwroot\\logo.png",
       "PackagePath": "staticwebassets\\logo.png"
+    },
+    {
+      "Id": "C:\\Workspace\\Microsoft Workspace\\Web Development\\Projects\\ChildrenTransport.Solution\\ChildrenTransport.Web\\wwwroot\\logo1.png",
+      "PackagePath": "staticwebassets\\logo1.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ChildrenTransport.Web.Microsoft.AspNetCore.StaticWebAssets.props",
