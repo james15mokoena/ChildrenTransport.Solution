@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "M6RerzmdmKNIRo+uTTEX1zt95olXqOHGSd868G7kgtI=",
+  "Hash": "9ArL+wma+7PB1gDCoiL/RIAB2Oh6L2xy4/Hqsu6f1TA=",
   "Source": "ChildrenTransport.Web",
   "BasePath": "_content/ChildrenTransport.Web",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\logo.png"
+    },
+    {
+      "Identity": "C:\\Workspace\\Microsoft Workspace\\Web Development\\Projects\\ChildrenTransport.Solution\\ChildrenTransport.Web\\wwwroot\\images\\logo1.png",
+      "SourceId": "ChildrenTransport.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Workspace\\Microsoft Workspace\\Web Development\\Projects\\ChildrenTransport.Solution\\ChildrenTransport.Web\\wwwroot\\",
+      "BasePath": "_content/ChildrenTransport.Web",
+      "RelativePath": "images/logo1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo1.png"
     },
     {
       "Identity": "C:\\Workspace\\Microsoft Workspace\\Web Development\\Projects\\ChildrenTransport.Solution\\ChildrenTransport.Web\\wwwroot\\images\\quantum1.png",
@@ -1326,6 +1345,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\logo.png"
+    },
+    {
+      "Identity": "C:\\Workspace\\Microsoft Workspace\\Web Development\\Projects\\ChildrenTransport.Solution\\ChildrenTransport.Web\\wwwroot\\logo1.png",
+      "SourceId": "ChildrenTransport.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Workspace\\Microsoft Workspace\\Web Development\\Projects\\ChildrenTransport.Solution\\ChildrenTransport.Web\\wwwroot\\",
+      "BasePath": "_content/ChildrenTransport.Web",
+      "RelativePath": "logo1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logo1.png"
     }
   ]
 }

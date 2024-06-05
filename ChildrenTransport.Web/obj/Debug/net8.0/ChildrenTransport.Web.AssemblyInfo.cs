@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChildrenTransport.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9946642d53d13795d06a053e4a8c779486785971")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31eef2c3074b96c797ba4b51308dcc9fb47f727f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChildrenTransport.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChildrenTransport.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
